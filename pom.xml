@@ -91,7 +91,7 @@
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							<mainClass>io.nutz.todomvc.MainLauncher</mainClass>
+							<mainClass>io.nutz.todomvc.TodoLauncher</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
