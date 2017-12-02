@@ -31,7 +31,7 @@ public class TodoLauncher {
     int currentId;
 
     @GET
-    @At("/api")
+    @At("/api/")
     public List<Todo> getAll() {
         return new ArrayList<Todo>(todos.values());
     }
