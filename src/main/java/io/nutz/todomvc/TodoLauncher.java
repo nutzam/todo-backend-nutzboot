@@ -31,13 +31,13 @@ public class TodoLauncher {
     int currentId;
 
     @GET
-    @At("/")
+    @At("/api")
     public List<Todo> getAll() {
         return new ArrayList<Todo>(todos.values());
     }
 
     @GET
-    @At("/?")
+    @At("/api/?")
     public Object getTodoById(String id) {
     	Todo todo = todos.get(id);
     	if (todo == null)
@@ -46,7 +46,7 @@ public class TodoLauncher {
     }
 
     @POST
-    @At("/")
+    @At("/api/")
     @AdaptBy(type=JsonAdaptor.class)
     public Todo createTodo(Todo todo, HttpServletRequest request) {
         todo.setUrl(request.getRequestURL().toString() + currentId);
@@ -55,7 +55,7 @@ public class TodoLauncher {
         return todo;
     }
 
-    @At(value="/?", methods="patch")
+    @At(value="/api/?", methods="patch")
     @AdaptBy(type=JsonAdaptor.class)
     public Object update(String id, Todo todo) {
     	Todo _todo = todos.get(id);
@@ -65,18 +65,18 @@ public class TodoLauncher {
     }
 
     @DELETE
-    @At("/")
+    @At("/api/")
     public void deleteAll() {
         todos.clear();
     }
 
     @DELETE
-    @At("/?")
+    @At("/api/?")
     public void deleteTodo(String id) {
         todos.remove(id);
     }
     
-    @At(value= {"/", "/?"}, methods="OPTIONS")
+    @At(value= {"/api/", "/api/?"}, methods="OPTIONS")
     public void nop() {}
 
     public static void main(String[] args) throws Exception {
