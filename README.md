@@ -22,7 +22,7 @@ java -jar target/todo-backend-nutzboot-2.0-SNAPSHOT.jar
 
 ## 关于
 
-NutzBoot@github https://github.com/nutzam/nutzboot
-NutzBoot@gitee https://gitee.com/nutz/nutzboot
-官网 https://nutz.io
-社区 https://nutz.cn
+* NutzBoot@github https://github.com/nutzam/nutzboot
+* NutzBoot@gitee https://gitee.com/nutz/nutzboot
+* 官网 https://nutz.io
+* 社区 https://nutz.cn
